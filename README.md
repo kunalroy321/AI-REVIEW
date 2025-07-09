@@ -1,32 +1,10 @@
-# AI Review - Full Stack Project
+# 🚀 AI Review — Full Stack Platform
 
-This repository contains both the frontend and backend for the AI Review project. The frontend is built with React and Vite, while the backend is powered by Node.js and Express. Together, they provide a modern, scalable platform for AI-powered review workflows.
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Project Structure](#project-structure)
-- [Frontend](#frontend)
-  - [Getting Started](#getting-started-frontend)
-  - [Available Scripts](#available-scripts-frontend)
-  - [Configuration](#configuration-frontend)
-  - [Project Details](#project-details-frontend)
-  - [Linting](#linting-frontend)
-  - [Build & Deployment](#build--deployment-frontend)
-- [Backend](#backend)
-  - [Getting Started](#getting-started-backend)
-  - [Available Scripts](#available-scripts-backend)
-  - [Configuration](#configuration-backend)
-  - [API Endpoints](#api-endpoints)
-  - [Project Details](#project-details-backend)
-  - [Development Notes](#development-notes)
-- [Contact](#contact)
+Welcome to **AI Review**, a modern, scalable, and AI-powered review platform. This monorepo contains both the lightning-fast React + Vite frontend and the robust Node.js + Express backend. Designed for seamless collaboration, rapid iteration, and future-proof extensibility.
 
 ---
 
-## Project Overview
-AI Review is a full stack application designed to streamline review processes using AI. The frontend provides a fast, interactive UI, while the backend exposes RESTful APIs for AI-powered features.
-
-## Project Structure
+## 🗂️ Project Structure
 ```
 AI-review/
 ├── Backend/                 # Node.js + Express backend
@@ -62,118 +40,87 @@ AI-review/
 
 ---
 
-# Frontend
+# 🌐 Frontend — React + Vite
 
-## Getting Started (Frontend)
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-
-### Installation
+### ⚡ Quickstart
 ```sh
 cd Frontend
-npm install
-# or
-yarn install
+npm install   # or yarn install
+npm run dev   # or yarn dev
 ```
+Visit: [http://localhost:5173](http://localhost:5173)
 
-### Running the Development Server
-```sh
-npm run dev
-# or
-yarn dev
-```
-The app will be available at [http://localhost:5173](http://localhost:5173) by default.
+### 🛠️ Scripts
+- `dev` — Start development server with hot reload
+- `build` — Production build
+- `preview` — Preview production build
+- `lint` — Lint code with ESLint
 
-## Available Scripts (Frontend)
-- `npm run dev` / `yarn dev`: Start the development server
-- `npm run build` / `yarn build`: Build the app for production
-- `npm run preview` / `yarn preview`: Preview the production build
-- `npm run lint` / `yarn lint`: Run ESLint to check for code issues
+### ⚙️ Configuration
+- **Vite**: `vite.config.js` — customize dev server, proxy, etc.
+- **ESLint**: `eslint.config.js` — code quality rules
 
-## Configuration (Frontend)
-- **Vite**: Configuration is in `vite.config.js`. You can customize server port, proxy, and other Vite options here.
-- **ESLint**: Linting rules are defined in `eslint.config.js`.
+### 🧩 Details
+- **Entry**: `src/main.jsx` → `App.jsx`
+- **Styling**: `src/App.css`, `src/index.css`
+- **Assets**: `src/assets/`, `public/`
 
-## Project Details (Frontend)
-- **React**: The app is built using React (see `src/App.jsx` and `src/main.jsx`).
-- **Styling**: CSS files are located in `src/` for both global and component-level styles.
-- **Assets**: Place images and static files in `src/assets/` or `public/`.
-- **Entry Point**: The app starts from `src/main.jsx` which renders `App.jsx`.
-
-## Linting (Frontend)
-To maintain code quality, run ESLint:
+### 🧹 Linting
 ```sh
 npm run lint
-# or
-yarn lint
 ```
-You can adjust linting rules in `eslint.config.js`.
 
-## Build & Deployment (Frontend)
-To create a production build:
+### 🚀 Build & Deploy
 ```sh
 npm run build
-# or
-yarn build
 ```
-The output will be in the `dist/` folder. You can deploy this folder to any static hosting service (e.g., Vercel, Netlify, GitHub Pages).
-
-To preview the production build locally:
-```sh
-npm run preview
-# or
-yarn preview
-```
+Deploy `dist/` to Vercel, Netlify, or any static host.
 
 ---
 
-# Backend
+# 🖥️ Backend — Node.js + Express
 
-## Getting Started (Backend)
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [npm](https://www.npmjs.com/)
-
-### Installation
+### ⚡ Quickstart
 ```sh
 cd Backend
 npm install
-```
-
-### Running the Server
-```sh
 npm start
 ```
-By default, the server listens on port 3000 (or as configured in `server.js`).
+Default: [http://localhost:3000](http://localhost:3000)
 
-## Available Scripts (Backend)
-- `npm start`: Start the server
-- `npm run dev`: Start the server with hot reloading (if using nodemon)
-- `npm install`: Install dependencies
+### 🛠️ Scripts
+- `start` — Start server
+- `dev` — Hot reload (with nodemon)
+- `install` — Install dependencies
 
-## Configuration (Backend)
-- **Express**: Main app logic is in `src/app.js`.
-- **CORS**: Enabled for cross-origin requests.
-- **JSON Parsing**: Enabled for incoming requests.
-- **Routes**: All `/ai` routes are handled by `src/routes/ai.routes.js`.
+### ⚙️ Configuration
+- **Express**: `src/app.js`
+- **CORS**: Enabled
+- **JSON**: Body parsing enabled
+- **Routes**: `/ai` handled by `src/routes/ai.routes.js`
 
-## API Endpoints
-- `GET /` — Health check endpoint, returns `Hello World`.
-- `POST /ai/...` — AI-related endpoints (see `src/routes/ai.routes.js` and `src/controllers/ai.controller.js` for details).
+### 🔗 API Endpoints
+- `GET /` — Health check (`Hello World`)
+- `POST /ai/...` — AI endpoints (see `src/routes/ai.routes.js`)
 
-## Project Details (Backend)
-- **Controllers**: Handle request/response logic (see `src/controllers/`).
-- **Services**: Contain business logic, especially for AI features (see `src/services/`).
-- **Routes**: Define API endpoints and route requests to controllers.
-- **Modularity**: The codebase is organized for scalability and maintainability.
+### 🧩 Details
+- **Controllers**: `src/controllers/`
+- **Services**: `src/services/`
+- **Routes**: `src/routes/`
+- **Temp**: `temp.js` for experiments
 
-## Development Notes
-- Use `temp.js` for experiments or temporary scripts.
-- Update or add environment variables as needed for production.
-- For advanced features, consider adding logging, error handling, and environment configuration.
+### 📝 Dev Notes
+- Use `.env` for secrets/config (add as needed)
+- Extend with logging, error handling, etc.
 
 ---
 
-# Contact
-For questions or support, please contact the project maintainer.
+# 🧑‍💻 Contributing & Support
+- Open to PRs, issues, and suggestions!
+- Maintainer: **Kunal Roy**  
+  📞 9883328028  
+  ✉️ k98038751@gmail.com
+
+---
+
+> _AI Review — Built for the future. Powered by modern web technologies._
